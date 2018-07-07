@@ -18,9 +18,7 @@ const req = require.context(
 )
 
 function loadStories() {
-  req.keys().forEach(filename => {
-    req(filename)
-  })
+  req.keys().forEach(filename => req(filename))
 }
 
 configure(loadStories, module);

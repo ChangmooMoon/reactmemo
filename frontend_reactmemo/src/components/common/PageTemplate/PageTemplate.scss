@@ -1,0 +1,9 @@
+@import 'utils';
+
+.template {
+  background: url('static/background.jpg');
+  main {
+    background: inherit;
+    min-height: calc(100vh - 5rem)
+  }
+}

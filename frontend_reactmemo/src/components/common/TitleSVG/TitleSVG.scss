@@ -1,0 +1,11 @@
+svg {
+  height: 100px;
+  width: 200px;
+  position: relative;
+  .word {
+    font-family: Shrikhand, cursive;
+    letter-spacing: 0.05em;
+    padding: 0.5em;
+    font-size: 30px;
+  }
+}

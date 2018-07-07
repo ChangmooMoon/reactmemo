@@ -1,0 +1,22 @@
+@import 'utils';
+
+header {
+  display: flex;
+  .header-content{
+    justify-content: space-between;
+    height: 5rem;
+    width: 100vw;
+    margin: 0 auto;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+    .right-step{
+      padding-right: 3rem;
+      .user-step{
+        font-size: 40px;
+        font-weight: bold;
+      }
+    }
+  }
+}
