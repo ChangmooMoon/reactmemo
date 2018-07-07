@@ -3,7 +3,12 @@
 .template {
   background: url('static/background.jpg');
   main {
-    background: inherit;
+    display: grid;
+    overflow: auto;
+    margin: 0 1rem;
+    grid-template-columns: 15vw 30vw 44vw;
+    grid-template-rows: 85vh;
+    grid-column-gap: 3vw;
     min-height: calc(100vh - 5rem)
   }
 }
