@@ -1,11 +1,12 @@
 @import 'utils';
 
 .memo-content {
-  background: $oc-gray-5;
-  border-radius: 5px;
+  background: $oc-gray-9;
+  border-radius: 1rem;
   padding: 0.5rem;
+  user-select: text;
   .deco-box {
-    background: white;
+    background: $oc-gray-1;
     border-radius: inherit;
     padding: 1rem;
     .title{

@@ -2,16 +2,40 @@
 
 .control-box{
   display: flex;
-  justify-content: space-between;
-  background: $oc-gray-5;
-  margin-bottom: 0.2rem;
-  border-radius: 5px;
-  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
   font-weight: bold;
+  width: 100%;
+  height: 35px;
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  background: black;
+  color: white;
+  .deco-box {
+    display: inherit;
+    justify-content: space-between;
+    align-items: inherit;
+    width: calc(100% - 0.5rem);
+    height: 80%;
+    background: $oc-gray-9;
+    border-radius: inherit;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    .label-title {
+      @include media('<700px') {
+        font-size: 0.8rem;
+      }
+      @include media('<600px') {
+        font-size: 0.5rem;
+      }
+    }
+  }
 }
 .memo-item {
   display: flex;
-  background: $oc-gray-4;
+  background: $oc-gray-9;
   width: 100%;
   margin-bottom: 0.2rem;
   border-radius: 5px;
@@ -22,7 +46,7 @@
     padding-right: 0.5rem;
   }
   .deco-box{
-    background: white;
+    background: $oc-gray-1;
     width: 100%;
     height: 100%;
     border-radius: inherit;

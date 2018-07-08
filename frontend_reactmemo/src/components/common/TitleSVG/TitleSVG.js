@@ -14,7 +14,7 @@ const titleSVG = () => {
           fill='black'
           stroke="black"
           strokeLinecap="round"
-          strokeWidth="3%"
+          strokeWidth="6%"
           textAnchor="middle"
           x="50%"
           y="50%"

@@ -6,21 +6,32 @@ const cx = classNames.bind(styles)
 
 const LabelItem = ({
   labelName = 'label',
-  amount = 0
+  amount = 0,
+  checkbox = 'checkbox'
 }) => {
-  return(
+  return (
     <div className={cx('label')}>
-      <span>{labelName}</span>
-      <span>({amount})</span>
+      <span>
+        <input type={checkbox}/>
+      </span>
+      <span className={cx('deco-box')}>
+        <span>{labelName}</span>
+        <span>({amount})</span>
+      </span>
     </div>
   )
 }
 
 const AddLabel = () => {
   return(
-    <button className={cx('button-add')}>
-      +label
-    </button>
+    <div>
+      <button className={cx('button-add')}>
+        Add
+      </button>
+      <button className={cx('button-add')}>
+        Del
+      </button>
+    </div>
   )
 }
 
@@ -29,7 +40,7 @@ let LabelItems = [<LabelItem />,<LabelItem />,<LabelItem />,<LabelItem />,<Label
 const LabelList = () => {
   return (
     <div className={cx('label-list')}>
-      <LabelItem labelName={'all'} amount={'amount'} />
+      <LabelItem labelName={'All'} amount={'amount'} checkbox='hidden'/>
       {LabelItems.map(item => item)}
       <LabelItem />
       <LabelItem />

@@ -9,11 +9,13 @@ const ControlBox = ({
 }) => {
   return (
     <div className={cx('control-box')}>
-      <span className={cx('label-title')}>{label}</span>
-      <span>
-        <button>Add</button>
-        <button>Del</button>
+      <div className={cx('deco-box')}>
+        <span className={cx('label-title')}>{label}</span>
+        <span>
+          <button>Add</button>
+          <button>Del</button>
         </span>
+      </div>
     </div>
   )
 }

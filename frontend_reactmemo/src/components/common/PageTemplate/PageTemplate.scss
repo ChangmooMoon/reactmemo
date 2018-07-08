@@ -1,12 +1,11 @@
 @import 'utils';
 
 .template {
-  background: url('static/background.jpg');
   main {
     display: grid;
     overflow: auto;
-    margin: 0 1rem;
-    grid-template-columns: 15vw 30vw 44vw;
+    margin: 1rem;
+    grid-template-columns: 15vw 30vw 45vw;
     grid-template-rows: 85vh;
     grid-column-gap: 3vw;
     min-height: calc(100vh - 5rem)

@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "autoprefixer": "7.1.6",
+    "axios": "^0.18.0",
     "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
@@ -116,5 +117,6 @@
     "@storybook/addons": "^3.4.8",
     "@storybook/react": "^3.4.8",
     "react-hot-loader": "^4.3.3"
-  }
+  },
+  "proxy": "http://localhost:3001"
 }

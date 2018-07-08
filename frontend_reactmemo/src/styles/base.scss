@@ -1,12 +1,15 @@
-@import url("//fonts.googleapis.com/earlyaccess/notosanskr.css");
-@import url('//fonts.googleapis.com/css?family=Shrikhand');
+@import url("//fonts.googleapis.com/css?family=Bangers");
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
 
 body {
   margin: 0;
   box-sizing: border-box;
-  font-family: "Noto Sans KR", Shrikhand;
+  font-family: 'Nanum Gothic', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  background: linear-gradient(45deg, white,#f8f9fa,#e9ecef,#ced4da,#868e96);
+  user-select: none;
 }
 
 // box-sizing 일괄 설정
