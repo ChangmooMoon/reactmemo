@@ -1,16 +1,11 @@
-import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
-import * as modules from './modules'
+import { createStore } from 'redux'
+import modules from './modules'
 
-const reducers = combineReducers(modules)
+const configure = () => {
+  const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  const store = createStore(modules,devTools)
+  return store
+}
 
-// devTool
-const isDev = process.env.NODE_ENV === 'development';
-const devtools = isDev && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
-const composeEnhancers = devtools || compose;
 
-// preloadedState = server-side rendering initialState
-const configure = (preloadedState) => createStore(reducers, preloadedState, composeEnhancers(
-  applyMiddleware()
-));
-
-export default configure;
+export default configure

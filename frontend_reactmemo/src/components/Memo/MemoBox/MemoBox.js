@@ -12,16 +12,11 @@ const MemoBox = ({
   return (
     <div className={cx('memo-content')}>
       <div className={cx('deco-box')}>
-        <div className={cx('title')}>
-          <div className={cx('title-left')}>
-            <span>{title}</span>
-            <span>
-              <button>Del</button>
-            </span>
-          </div>
-          <span className={cx('title-right')}>
-            Updated: {modifiedDate}
-          </span>
+        <div className={cx('title-left')}>
+          <span>{title}</span>
+        </div>
+        <div className={cx('title-right')}>
+          Updated: {modifiedDate}
         </div>
         <div className={cx('content')}>
           {content}

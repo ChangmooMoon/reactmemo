@@ -9,24 +9,43 @@
   border-radius: 5px;
   margin-bottom: 0.2rem;
   font-family: sans-serif;
-  font-weight: bold;
   background: black;
   color: white;
+  cursor: pointer;
   .deco-box {
     display: inherit;
     justify-content: inherit;
     align-items: inherit;
     width: calc(100% - 0.5rem);
-    height: 85%;
+    height: calc(100% - 0.5rem);
     background: $oc-gray-9;
     border-radius: inherit;
+    &:hover {
+      font-weight: bold;
+    }
   }
 }
 
-.button-add {
-  border-radius: 4px;
+.button {
+  width : 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
   cursor: pointer;
-  &:focus {
-    outline: none;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
   }
+}
+
+.control-box {
+  display: flex;
+  align-items: center;
+}
+
+.label-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }

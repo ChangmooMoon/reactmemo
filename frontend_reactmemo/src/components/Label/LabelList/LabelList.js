@@ -2,18 +2,17 @@ import React from 'react';
 import styles from './LabelList.scss'
 import classNames from 'classnames/bind'
 
+import AddCircle from 'static/AddCircle'
+import Bin from 'static/Bin'
+
 const cx = classNames.bind(styles)
 
 const LabelItem = ({
   labelName = 'label',
   amount = 0,
-  checkbox = 'checkbox'
 }) => {
   return (
-    <div className={cx('label')}>
-      <span>
-        <input type={checkbox}/>
-      </span>
+    <div className={cx('label')} draggable='true'>
       <span className={cx('deco-box')}>
         <span>{labelName}</span>
         <span>({amount})</span>
@@ -24,13 +23,25 @@ const LabelItem = ({
 
 const AddLabel = () => {
   return(
-    <div>
-      <button className={cx('button-add')}>
-        Add
-      </button>
-      <button className={cx('button-add')}>
-        Del
-      </button>
+    <span className={cx('button')}>
+      <AddCircle />
+    </span>
+  )
+}
+
+const DeleteLabel = () => {
+  return (
+    <span className={cx('button')}>
+      <Bin />
+    </span>
+  )
+}
+
+const ControlBox = () => {
+  return (
+    <div className={cx('control-box')}>
+      <AddLabel />
+      <DeleteLabel />
     </div>
   )
 }
@@ -40,16 +51,8 @@ let LabelItems = [<LabelItem />,<LabelItem />,<LabelItem />,<LabelItem />,<Label
 const LabelList = () => {
   return (
     <div className={cx('label-list')}>
-      <LabelItem labelName={'All'} amount={'amount'} checkbox='hidden'/>
+      <LabelItem labelName={'All'} />
       {LabelItems.map(item => item)}
-      <LabelItem />
-      <LabelItem />
-      <LabelItem />
-      <LabelItem />
-      <LabelItem />
-      <LabelItem />
-      <LabelItem />
-      <LabelItem />
       <AddLabel />
     </div>
   );

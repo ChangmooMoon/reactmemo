@@ -12,19 +12,6 @@ const titleSVG = () => {
           className={cx('word')}
           dominantBaseline='central'
           fill='black'
-          stroke="black"
-          strokeLinecap="round"
-          strokeWidth="6%"
-          textAnchor="middle"
-          x="50%"
-          y="50%"
-          >
-          reactMemo
-        </text>
-        <text
-          className={cx('word')}
-          dominantBaseline='central'
-          fill='white'
           textAnchor='middle'
           x='50%'
           y='50%'
